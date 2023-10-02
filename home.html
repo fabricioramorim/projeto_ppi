@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Cadastro de Livros</title>
+    <!-- Adicione o CSS do Bootstrap e do Material Design Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.11/css/mdb.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <!-- Adicione as Fontes do Google -->
+    <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+    <!-- Adicione o Favicon -->
+    <link rel="icon" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" type="image/png">
+    <!-- Adicione o CSS local -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary navbar1-color">
+          <div class="container-fluid">
+            <a class="navbar-brand">
+                <img src="https://bkpsitecpsnew.blob.core.windows.net/uploadsitecps/sites/39/2023/05/fatec_itu.png"
+                    width="170" height="50" class="d-inline-block align-top" alt="">
+            </a>
+            <button type="button" class="btn btn-clean" onclick="location.href='index.html'">Sair</button>
+          </div>
+        </nav>
+      </div>
+    <div class="container">
+        <h1 class="mt-4 another-font text-center">Cadastro de Livros</h1>
+        <form class="text-left">
+            <div class="row">
+            <div class="form-group col-md-6">
+                <label for="titulo">Título do Livro</label>
+                <input type="text" class="form-control" id="titulo" placeholder="Insira o título do livro">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="autor">Autor</label>
+                <input type="text" class="form-control" id="autor" placeholder="Insira o nome do autor">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="ano">Ano de Publicação</label>
+                <input type="number" class="form-control" id="ano" placeholder="Insira o ano de publicação">
+            </div>
+            <!-- Campo do tipo data -->
+            <div class="form-group col-md-6">
+                <label for="data">Data de Aquisição</label>
+                <input type="date" class="form-control" id="data">
+            </div>
+            <!-- Campo do tipo checkbox -->
+            <div class="form-check col-md-12">
+                <input type="checkbox" class="form-check-input" id="disponivel">
+                <label class="form-check-label" for="disponivel">Disponível para empréstimo</label>
+            </div>
+            <!-- Campo do tipo radio -->
+            <div class="form-check col-md-12">
+                <input type="radio" id="novo" name="estado" value="Novo" checked>
+                <label for="novo">Novo</label><br>
+                <input type="radio" id="usado" name="estado" value="Usado">
+                <label for="usado">Usado</label><br>
+            </div>
+            <!-- Campo do tipo texto -->
+            <div class="form-group col-md-12">
+                <label for="descricao">Descrição</label>
+                <textarea class="form-control" id="descricao" rows="3"></textarea>
+            </div>
+        </div>
+            <button type="submit" class="btn btn-primary" onclick="salvarCliente()">Cadastrar</button>
+            <button type="reset" class="btn btn-light another-color">Limpar</button>
+        </form>
+        <h2 class="mt-4">Livros Cadastrados</h2>
+        <div id="listagem"></div>
+    </div>
+
+    <!-- Adicione o JavaScript do Bootstrap e do Material Design Bootstrap no final do corpo -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.11/js/mdb.min.js"></script>
+    <!-- Adicione o JavaScript local -->
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/books.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registro</title>
+    <!-- Adicione o CSS do Bootstrap e do Material Design Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.11/css/mdb.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <!-- Adicione as Fontes do Google -->
+    <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+    <!-- Adicione o Favicon -->
+    <link rel="icon" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" type="image/png">
+    <!-- Adicione o CSS local -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="text-center" style="padding:50px 0">
+        <!-- Logo -->
+        <img src="https://bkpsitecpsnew.blob.core.windows.net/uploadsitecps/sites/39/2023/05/fatec_itu.png" width="200px">
+        <div class="logo">Gestāo de Tecnologia da Informação<br>Registro do usuário</div>
+        <!-- Formulario de registro -->
+        <div class="login-form-1">
+            <form id="registrationForm" class="text-left">
+                <div class="login-form-main-message"></div>
+                <div class="main-login-form">
+                    <div class="login-group">
+                        <div class="form-group">
+                            <label for="name" class="sr-only">Nome</label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="nome" required autofocus>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="sr-only">E-mail</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="e-mail" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="sr-only">Senha</label>
+                            <input type="password" class="form-control" id="password" name="password" placeholder="senha" required>
+                        </div>
+                        <div class="form-group login-group-checkbox">
+                            <input type="checkbox" class="" id="reg_agree" name="reg_agree" required>
+                            <label for="reg_agree">Eu concordo com os <a href="#">termos</a></label>
+                        </div>
+                    </div>
+                    <button type="submit" class="login-button"><i class="fa fa-chevron-right"></i></button>
+                </div>
+                <div class="etc-login-form">
+                    <p>Já possui uma conta? <a href="index.html">entre aqui</a></p>
+                    <br>
+                    <p id="registerMessage"></p>
+                </div>
+            </form>
+        </div>
+        <!-- end:Fim do formulario de login -->
+
+    <!-- Adicione o JavaScript do Bootstrap e do Material Design Bootstrap no final do corpo -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.11/js/mdb.min.js"></script>
+    <!-- Adicione o JavaScript local -->
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/register.js"></script>
+</body>
+</html>
