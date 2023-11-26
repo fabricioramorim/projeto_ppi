@@ -12,6 +12,7 @@
     <link rel="icon" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" type="image/png">
     <!-- Adicione o CSS local -->
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
     <div class="text-center" style="padding:50px 0">
@@ -36,12 +37,14 @@
                         </div>
                     </div>
                     <!-- botao de login -->
-                    <button type="submit" class="login-button"><i class="fa fa-chevron-right"></i></button>
+                    <button type="submit" class="login-button" onclick="event.preventDefault();loginFirebase(document.getElementById('email').value,
+                    document.getElementById('password').value)"><i class="fa fa-chevron-right"></i></button>
+
                 </div>
                 <div class="etc-login-form">
                     <p>novo por aqui? <a href="register.html">registre-se</a></p>
                     <br>
-                    <p id="loginMessage"></p>
+                    <p id="message"></p>
                 </div>
             </form>
         </div>
@@ -54,6 +57,8 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.11/js/mdb.min.js"></script>
     <!-- Adicione o JavaScript local -->
     <script type="text/javascript" src="js/script.js"></script>
-    <script type="text/javascript" src="js/login.js"></script>
+    <script src="js/firebaseConfig.js"></script>
+    <script src="js/auth.js"></script>
 </body>
+
 </html>

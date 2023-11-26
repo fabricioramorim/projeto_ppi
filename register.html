@@ -41,7 +41,8 @@
                             <label for="reg_agree">Eu concordo com os <a href="#">termos</a></label>
                         </div>
                     </div>
-                    <button type="submit" class="login-button"><i class="fa fa-chevron-right"></i></button>
+                    <button type="submit" class="login-button" onclick="event.preventDefault();novoUsuario(document.getElementById('email').value,
+                    document.getElementById('password').value)"><i class="fa fa-chevron-right"></i></button>
                 </div>
                 <div class="etc-login-form">
                     <p>Já possui uma conta? <a href="index.html">entre aqui</a></p>
@@ -59,6 +60,7 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.11/js/mdb.min.js"></script>
     <!-- Adicione o JavaScript local -->
     <script type="text/javascript" src="js/script.js"></script>
-    <script type="text/javascript" src="js/register.js"></script>
+    <script src="js/firebaseConfig.js"></script>
+    <script src="js/auth.js"></script>
 </body>
 </html>
