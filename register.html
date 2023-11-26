@@ -25,10 +25,6 @@
                 <div class="main-login-form">
                     <div class="login-group">
                         <div class="form-group">
-                            <label for="name" class="sr-only">Nome</label>
-                            <input type="text" class="form-control" id="name" name="name" placeholder="nome" required autofocus>
-                        </div>
-                        <div class="form-group">
                             <label for="email" class="sr-only">E-mail</label>
                             <input type="email" class="form-control" id="email" name="email" placeholder="e-mail" required>
                         </div>
@@ -46,9 +42,7 @@
                 </div>
                 <div class="etc-login-form">
                     <p>Já possui uma conta? <a href="index.html">entre aqui</a></p>
-                    <br>
-                    <p id="registerMessage"></p>
-                </div>
+                    </div>
             </form>
         </div>
         <!-- end:Fim do formulario de login -->
@@ -58,8 +52,12 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
     <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.11/js/mdb.min.js"></script>
+    <!-- Firebase script -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-database.js"></script>
     <!-- Adicione o JavaScript local -->
-    <script type="text/javascript" src="js/script.js"></script>
     <script src="js/firebaseConfig.js"></script>
     <script src="js/auth.js"></script>
 </body>

@@ -38,12 +38,15 @@ a:hover {
   font-family: 'Roboto', sans-serif;
 }
 .another-color {
-  color: #cacaca;
+  color: #f85656;
+}
+.btn-rounded {
+  border-radius: 2em;
 }
 /*=== Button gray ===*/
 .btn-clean {
-  background-color: #cacaca;
-  border-color: #cacaca;
+  background-color: #ffffff;
+  border-color: #ffffff;
   color: #999999;
   border-radius: 10px;
 }

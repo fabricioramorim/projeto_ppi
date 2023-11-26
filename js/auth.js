@@ -13,7 +13,7 @@ function loginFirebase(email, senha) {
         .signInWithEmailAndPassword(email, senha)
         .then(result => {
             alert(`Bem vindo, ${JSON.stringify(result.user.email)}`)
-            window.location.href = `${baseURL}/HTML/Fatec/Projeto/home.html`
+            window.location = "../validation.html"
         })
         .catch(error => {
             var mensagemErro = ''
@@ -21,7 +21,7 @@ function loginFirebase(email, senha) {
                 case 'auth/invalid-email':
                     mensagemErro = 'O e-mail informado é inválido!'
                     break;
-                case 'aluth/email-already-exists':
+                case 'auth/email-already-exists':
                     mensagemErro = 'O e-mail informado já está sendo utilizado!'
                     break;
                 default:
@@ -42,26 +42,49 @@ function novoUsuario(email, senha) {
         .then((result) => {
             alert(`Bem vindo, ${JSON.stringify(result.user.email)}`)
             // Direcionameos o usuário para a tela inicial
-            window.location.href = `${baseURL}/HTML/Fatec/Projeto/index.html`
+            window.location = "../books.html"
         })
         .catch(error => {
             alert(`Nâo foi possível cadastrar o usuário. erro: ${error.message}`)
         })
 }
+
+/**
+ * loginGoogle
+ * Realiza a autenticação do usuário no firabase
+ * @param {Null}
+ *  
+    */
+
+function loginGoogle() {
+    var provider = new firebase.auth.GoogleAuthProvider();
+    firebase.auth().signInWithPopup(provider)
+        .then(result => {
+            alert(`Bem vindo, ${JSON.stringify(result.user.email)}`)
+            window.location = "../books.html"
+        })
+        .catch(error => {
+            alert(`Erro ao efetuar o login: ${error.message}`)
+        })
+}
+
+
 /**
  * verificaLogado
  * Verifica se o usuário está logado no sistema
  * @param {Null}
  */
 function verificaLogado() {
-    firebase.auth().onAuthStateChanged(user => {
-        if (!user) {
-            console.log('Acesso inválido. Redirecionando...')
-            window.location.href = baseURL
+    firebase.auth().onAuthStateChanged((user) => {
+        if (user) {
+        } else {
+            // Caso não esteja logado, direcionamos ele para a tela de login
+            window.location = "../index.html"
         }
     })
 }
+
 function logout() {
     alert('Saindo!')
-    window.location.href = `${baseURL}/HTML/Fatec/Projeto/index.html`
+    window.location = "../index.html"
 }
