@@ -85,6 +85,13 @@ function verificaLogado() {
 }
 
 function logout() {
-    alert('Saindo!')
-    window.location = "../index.html"
+    // Realiza o logout do usuário firebase
+    firebase.auth().signOut()
+        .then(() => {
+            // Direciona o usuário para a tela de login
+            window.location = "../index.html"
+        })
+        .catch(error => {
+            alert(`Erro ao efetuar o logout: ${error.message}`)
+        })
 }
