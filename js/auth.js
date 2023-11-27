@@ -13,7 +13,7 @@ function loginFirebase(email, senha) {
         .signInWithEmailAndPassword(email, senha)
         .then(result => {
             alert(`Bem vindo, ${JSON.stringify(result.user.email)}`)
-            window.location = "../validation.html"
+            window.location = "../books.html"
         })
         .catch(error => {
             var mensagemErro = ''
