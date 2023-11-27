@@ -141,13 +141,6 @@ function editarCliente(id) {
     if (doc.exists) {
       // Preencha o formulário de edição com os dados do livro
       let livro = doc.data();
-      document.getElementById('titulo').value = livro.titulo;
-      document.getElementById('autor').value = livro.autor;
-      document.getElementById('ano').value = livro.ano;
-      document.getElementById('data').value = livro.data;
-      document.getElementById('disponivel').checked = livro.disponivel;
-      document.querySelector(`input[name="estado"][value="${livro.estado}"]`).checked = true;
-      document.getElementById('descricao').value = livro.descricao;
 
       // Imprima o valor do campo "data" para o modal de edição no input id="data"
       let dataObj = new Date(livro.data);
