@@ -13,7 +13,7 @@ function loginFirebase(email, senha) {
         .signInWithEmailAndPassword(email, senha)
         .then(result => {
             alert(`Bem vindo, ${JSON.stringify(result.user.email)}`)
-            window.location = "../books.html"
+            window.location = "books.html"
         })
         .catch(error => {
             var mensagemErro = ''
@@ -42,7 +42,7 @@ function novoUsuario(email, senha) {
         .then((result) => {
             alert(`Bem vindo, ${JSON.stringify(result.user.email)}`)
             // Direcionameos o usuário para a tela inicial
-            window.location = "../books.html"
+            window.location = "books.html"
         })
         .catch(error => {
             alert(`Nâo foi possível cadastrar o usuário. erro: ${error.message}`)
@@ -61,7 +61,7 @@ function loginGoogle() {
     firebase.auth().signInWithPopup(provider)
         .then(result => {
             alert(`Bem vindo, ${JSON.stringify(result.user.email)}`)
-            window.location = "../books.html"
+            window.location = "books.html"
         })
         .catch(error => {
             alert(`Erro ao efetuar o login: ${error.message}`)
@@ -79,7 +79,7 @@ function verificaLogado() {
         if (user) {
         } else {
             // Caso não esteja logado, direcionamos ele para a tela de login
-            window.location = "../index.html"
+            window.location = "index.html"
         }
     })
 }
@@ -89,7 +89,7 @@ function logout() {
     firebase.auth().signOut()
         .then(() => {
             // Direciona o usuário para a tela de login
-            window.location = "../index.html"
+            window.location = "index.html"
         })
         .catch(error => {
             alert(`Erro ao efetuar o logout: ${error.message}`)
